@@ -15,6 +15,7 @@ public class DestroyedByContact : MonoBehaviour {
 		} else {
 			Debug.Log ("Composant GameController introuvable");
 		}
+
 	}
 
 	void OnTriggerEnter(Collider other) {
@@ -38,7 +39,7 @@ public class DestroyedByContact : MonoBehaviour {
 		Destroy (other.gameObject);
 		Instantiate (explosion, transform.position, transform.rotation);
 		if (other.gameObject.tag.Equals ("Player")) {
-
+			gameController.GameOver();
 			Instantiate (playerExplosion, other.transform.position, other.transform.rotation);
 		}
 		}

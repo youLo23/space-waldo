@@ -26,10 +26,18 @@ public class GameController : MonoBehaviour {
 		StartCoroutine(SpawnWaves ());
 	}
 
+	void Update(){
+		if (restart) {
+			if(Input.GetKeyDown(KeyCode.R)){
+				Application.LoadLevel(Application.loadedLevel);
+			}
+		}
+	}
+
 	IEnumerator SpawnWaves(){
 		yield return new WaitForSeconds (startwait);
 
-		while(true){
+		while(!gameOver){
 			for (int i = 0; i<hazardCount; i++) {
 				Vector3 spawnposition = new Vector3 (Random.Range (-spawnvalue.x, spawnvalue.x), spawnvalue.y, spawnvalue.z);
 				Quaternion spawnrotation = Quaternion.identity;
@@ -39,6 +47,11 @@ public class GameController : MonoBehaviour {
 
 			yield return new WaitForSeconds(wavewait);
 		}
+		Debug.Log ("Game Over!");
+		restart = true;
+		restartText.text = "Press 'R' to restart";
+
+		
 	}
 
 	public void addScore(int scoreValue){
@@ -49,8 +62,7 @@ public class GameController : MonoBehaviour {
 	public void GameOver(){
 		gameOver = true;
 		gameoverText.text = "Game Over.";
-		restart = true;
-		restartText.text = "Press 'R' to restart";
+
 	}
 
 	void UpdateScore(){

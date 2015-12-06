@@ -128,10 +128,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 136306}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2667ed6731271b3489d211904c3fb5f0, type: 3}
+  m_Script: {fileID: 11500000, guid: d91ff42a28a867c4785b5d635ca0883b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tumble: 2.5
+  tumble: 2
 --- !u!114 &11408994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -140,11 +140,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 136306}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3f2c73e499c09f4abb643002f23a89b, type: 3}
+  m_Script: {fileID: 11500000, guid: 47f481f9737d1964f8e74f21b2c4bb56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
   playerExplosion: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
+  scoreValue: 10
 --- !u!136 &13631724
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -168,6 +169,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_TagString
       value: Asteroid
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: tumble
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: scoreValue
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
