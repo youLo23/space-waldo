@@ -21,9 +21,7 @@ public class PlayerController : MonoBehaviour {
 	
 	}*/
 	private Rigidbody rb;
-	void Start (){
-		rb = GetComponent<Rigidbody> ();
-	}
+
 	public float speed;
 	public Boundary boundary;
 	public float tilt;
@@ -35,7 +33,14 @@ public class PlayerController : MonoBehaviour {
 	public float updateRate;
 	private Vector3 relative;
 	private RaycastHit hit;
+	private AudioSource audio;
 		//we hit
+
+	void Start (){
+		audio = GetComponent<AudioSource >();
+		rb = GetComponent<Rigidbody> ();
+	}
+
 	void FixedUpdate(){
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
@@ -53,6 +58,7 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetButton ("Fire1") && Time.time > nextFire) {
 			nextFire = Time.time + fireRate;
 			Instantiate (shot, spawn.position, spawn.rotation);
+			audio.Play();
 		}
 
 		if (Time.time > nextUpdate) {
@@ -65,7 +71,7 @@ public class PlayerController : MonoBehaviour {
 
 	}
 
-	public void OnMouseOver(){
+	/*public void OnMouseOver(){
 		if (Input.GetMouseButtonDown(0)){ // if left button pressed...
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit = new RaycastHit();
@@ -80,5 +86,5 @@ public class PlayerController : MonoBehaviour {
 			
 		}
 
-	}
+	}*/
 }
