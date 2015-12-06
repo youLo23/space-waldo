@@ -3,13 +3,29 @@ using System.Collections;
 
 public class GameController : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
+	public GameObject hazard;
+	public Vector3 spawnvalue;
+	public int hazardCount;
+	public float spawnwait;
+	public float wavewait;
+	public float startwait;
+
+	void Start(){
+		StartCoroutine(SpawnWaves ());
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	IEnumerator SpawnWaves(){
+		yield return new WaitForSeconds (startwait);
+
+		while(true){
+			for (int i = 0; i<hazardCount; i++) {
+				Vector3 spawnposition = new Vector3 (Random.Range (-spawnvalue.x, spawnvalue.x), spawnvalue.y, spawnvalue.z);
+				Quaternion spawnrotation = Quaternion.identity;
+				Instantiate (hazard, spawnposition, spawnrotation);
+				yield return new WaitForSeconds(spawnwait);
+			}
+
+			yield return new WaitForSeconds(wavewait);
+		}
 	}
 }
