@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour {
 	private bool gameOver, restart;
 
 	void Start(){
+		Debug.Log ("Yohohoho");
 		restart = false;
 		gameOver = false;
 		gameoverText.text = "";
@@ -29,7 +30,6 @@ public class GameController : MonoBehaviour {
 		yield return new WaitForSeconds (startwait);
 
 		while(true){
-			Debug.Log("spawn!");
 			for (int i = 0; i<hazardCount; i++) {
 				Vector3 spawnposition = new Vector3 (Random.Range (-spawnvalue.x, spawnvalue.x), spawnvalue.y, spawnvalue.z);
 				Quaternion spawnrotation = Quaternion.identity;
