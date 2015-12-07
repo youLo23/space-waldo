@@ -5,8 +5,10 @@ public class DestroyedByContact : MonoBehaviour {
 
 	public GameObject explosion;
 	public GameObject playerExplosion;
+	public GameObject surpriseBox;
 	private GameController gameController;
 	public int scoreValue;
+	public float force;
 
 	void Start(){
 		GameObject gameControllerObject = GameObject.FindGameObjectWithTag ("GameController");
@@ -24,6 +26,8 @@ public class DestroyedByContact : MonoBehaviour {
 			Debug.Log (other);
 			Destroy (gameObject);
 			Destroy (other.gameObject);
+			Instantiate (surpriseBox, transform.position, transform.rotation);
+			surpriseBox.GetComponent<Rigidbody>().AddForce(transform.forward*force);
 			Instantiate (explosion, transform.position, transform.rotation);
 			gameController.addScore(scoreValue);
 			
