@@ -272,7 +272,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!82 &342303832
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1163,4 +1163,4 @@ Transform:
   - {fileID: 1139892202}
   - {fileID: 1897354598}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
