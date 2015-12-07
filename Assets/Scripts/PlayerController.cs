@@ -67,8 +67,6 @@ public class PlayerController : MonoBehaviour {
 			//Debug.Log (Camera.main.transform.forward);
 		}
 
-
-
 	}
 
 	/*public void OnMouseOver(){

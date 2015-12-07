@@ -166,8 +166,13 @@ PlayerSettings:
     m_Icons:
     - serializedVersion: 2
       m_Icon: {fileID: 0}
+<<<<<<< HEAD
       m_Width: 0
       m_Height: 0
+=======
+      m_Width: 128
+      m_Height: 128
+>>>>>>> 6041f5e4ad5c93569dcc701f9f084e882256441c
   m_BuildTargetBatching: []
   m_BuildTargetGraphicsAPIs: []
   webPlayerTemplate: APPLICATION:Default
