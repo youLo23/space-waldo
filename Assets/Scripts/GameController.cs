@@ -12,8 +12,12 @@ public class GameController : MonoBehaviour {
 	public GUIText scoreText;
 	public GUIText gameoverText;
 	public GUIText restartText;
+	public GUIText BombeText;
 	private int score;
 	private bool gameOver, restart;
+	private bool bombe;
+
+
 
 	void Start(){
 		Debug.Log ("Yohohoho");
@@ -24,6 +28,7 @@ public class GameController : MonoBehaviour {
 		score = 0;
 		UpdateScore ();
 		StartCoroutine(SpawnWaves ());
+		Bombepr();
 	}
 
 	void Update(){
@@ -33,6 +38,16 @@ public class GameController : MonoBehaviour {
 			}
 		}
 	}
+	/*void bombe(){
+	
+	
+	
+	}*/
+
+
+
+
+
 
 	IEnumerator SpawnWaves(){
 		yield return new WaitForSeconds (startwait);
@@ -68,4 +83,9 @@ public class GameController : MonoBehaviour {
 	void UpdateScore(){
 		scoreText.text = "Score : " + score;
 	}
+	void Bombepr(){
+		BombeText.text = "Presse B to Bombe";
+	}
+
+
 }
