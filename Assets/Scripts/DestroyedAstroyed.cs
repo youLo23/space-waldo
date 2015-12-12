@@ -22,7 +22,7 @@ public class DestroyedAstroyed : MonoBehaviour {
 	void Update () {
 
 			if (Input.GetKeyDown (KeyCode.B)) {
-			if (gameController.getCpt() > 0){
+			if (gameController.getCpt() >= 0){
 				Destroy (gameObject);
 				Instantiate (explosion, transform.position, transform.rotation);
 				Debug.Log ("cptB: "+gameController.getCpt());
