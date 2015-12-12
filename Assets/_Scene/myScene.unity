@@ -294,7 +294,7 @@ MonoBehaviour:
   scoreText: {fileID: 1420156428}
   gameoverText: {fileID: 1897354599}
   restartText: {fileID: 1139892203}
-  BombeText: {fileID: 0}
+  BombeText: {fileID: 1200101895}
 --- !u!4 &342303831
 Transform:
   m_ObjectHideFlags: 0

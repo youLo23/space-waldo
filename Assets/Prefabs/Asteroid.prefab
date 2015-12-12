@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11406158}
   - 114: {fileID: 11408994}
   - 114: {fileID: 11400298}
+  - 114: {fileID: 11472886}
   m_Layer: 0
   m_Name: Asteroid
   m_TagString: Asteroid
@@ -150,6 +151,18 @@ MonoBehaviour:
   surpriseBox: {fileID: 156446, guid: 042131b57f31bed45a9dd1fa768598ef, type: 2}
   scoreValue: 10
   force: 0
+--- !u!114 &11472886
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afba0cf9a3d3f4e4e9570aca15e6d8b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
 --- !u!136 &13631724
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -202,6 +215,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 136306}
