@@ -13,7 +13,9 @@ public class GameController : MonoBehaviour {
 	public GUIText gameoverText;
 	public GUIText restartText;
 	public GUIText BombeText;
+	public GameObject surpriseBox;
 	private int score;
+	private bool readyToInstantiate;
 	private bool gameOver, restart;
 	private bool bombe;
 
@@ -28,6 +30,7 @@ public class GameController : MonoBehaviour {
 		score = 0;
 		UpdateScore ();
 		StartCoroutine(SpawnWaves ());
+		//StartCoroutine (instBox ());
 		Bombepr();
 	}
 
@@ -65,7 +68,6 @@ public class GameController : MonoBehaviour {
 		Debug.Log ("Game Over!");
 		restart = true;
 		restartText.text = "Press 'R' to restart";
-
 		
 	}
 
@@ -78,6 +80,15 @@ public class GameController : MonoBehaviour {
 		gameOver = true;
 		gameoverText.text = "Game Over.";
 
+	}
+
+	IEnumerator instBox(Vector3 position, Quaternion rotation){
+		yield return new WaitForSeconds(0.5f);
+		Instantiate (surpriseBox, position, rotation);
+
+	}
+	public void instantiateBox(Vector3 position, Quaternion rotation){
+		StartCoroutine(instBox (position, rotation));
 	}
 
 	void UpdateScore(){

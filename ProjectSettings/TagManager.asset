@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Fire
   - Asteroid
+  - Box
   layers:
   - Default
   - TransparentFX

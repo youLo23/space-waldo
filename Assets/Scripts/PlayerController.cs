@@ -69,20 +69,13 @@ public class PlayerController : MonoBehaviour {
 
 	}
 
-	/*public void OnMouseOver(){
-		if (Input.GetMouseButtonDown(0)){ // if left button pressed...
-			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-			RaycastHit hit = new RaycastHit();
-			if (Physics.Raycast(ray, out hit)){
-				Debug.Log (GetComponent<Collider>().tag);
-				transform.Rotate(0,90,0);
-			}
-			
-			else{
-				Debug.Log("pas clikay");
-			}
+	void OnTriggerEnter(Collider other) {
+		
+		if (!other.tag.Equals ("Box")) {
+			Debug.Log ("box collider " + other);
 			
 		}
+	}
 
-	}*/
+
 }
