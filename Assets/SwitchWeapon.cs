@@ -3,13 +3,11 @@ using System.Collections;
 
 public class SwitchWeapon : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	void OnTriggerEnter(Collider other) {
+		
+		if (other.tag.Equals ("Player")) {
+			Debug.Log ("box collider collision ");
+			
+		}
 	}
 }

@@ -69,13 +69,7 @@ public class PlayerController : MonoBehaviour {
 
 	}
 
-	void OnTriggerEnter(Collider other) {
-		
-		if (!other.tag.Equals ("Box")) {
-			Debug.Log ("box collider " + other);
-			
-		}
-	}
+
 
 
 }

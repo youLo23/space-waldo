@@ -5,16 +5,15 @@ public class SurpriseMover : MonoBehaviour {
 
 	private Vector3 velocity;
 	public float speed;
+	private Rigidbody rb;
 	// Use this for initialization
 	void Start () {
 		//velocity = transform.forward;
 		velocity = new Vector3 (0, 0, 1);
-	
+		rb = GetComponent<Rigidbody>();
+		rb.velocity = velocity * speed;
 	}
 	
 	// Update is called once per frame
-
-	void Update() {
-			transform.position += speed*velocity * Time.deltaTime;
-		}
+	
 }
