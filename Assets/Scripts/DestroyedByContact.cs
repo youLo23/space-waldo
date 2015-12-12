@@ -15,11 +15,11 @@ public class DestroyedByContact : MonoBehaviour {
 		if (gameControllerObject != null) {
 			gameController = gameControllerObject.GetComponent<GameController> ();
 		} else {
-			Debug.Log ("Composant GameController introuvable");
+			Debug.Log("Composant GameController introuvable");
 		}
 	}
 
-	void OnTriggerEnter(Collider other) {
+	void OnTriggerEnter(Collider other){
 
 		if (!other.tag.Equals ("Boundary")) {
 			//Debug.Log (other);

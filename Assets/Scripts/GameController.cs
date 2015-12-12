@@ -41,13 +41,6 @@ public class GameController : MonoBehaviour {
 			}
 		}
 	}
-	/*void bombe(){
-	
-	
-	
-	}*/
-
-
 
 
 
