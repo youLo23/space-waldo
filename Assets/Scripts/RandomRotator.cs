@@ -10,9 +10,8 @@ public class RandomRotator : MonoBehaviour {
 		rb = this.GetComponent<Rigidbody> ();
 		rb.angularVelocity = Random.insideUnitSphere * tumble;
 	}
-	
 	// Update is called once per frame
-	void Update () {
-	
+	void Update(){
+
 	}
 }
