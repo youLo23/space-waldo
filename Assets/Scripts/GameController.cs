@@ -78,16 +78,9 @@ public class GameController : MonoBehaviour {
 
 		for (int i = 0; i<5; i++){
 			
-			//Get the highScore from 1 - 5
 			highScoreKey = "HighScore"+(i+1).ToString();
 			highScore = PlayerPrefs.GetInt(highScoreKey,0);
-			
-			//if score is greater, store previous highScore
-			//Set new highScore
-			//set score to previous highScore, and try again
-			//Once score is greater, it will always be for the
-			//remaining list, so the top 5 will always be 
-			//updated
+	
 			if(score>highScore){
 				int temp = highScore;
 				PlayerPrefs.SetInt(highScoreKey,score);
