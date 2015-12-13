@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 
 public class GameController : MonoBehaviour {
 
-	public GameObject hazard;
+	public GameObject[] hazards;
 	public Vector3 spawnvalue;
 	public int hazardCount;
 	public float spawnwait;
@@ -59,6 +59,7 @@ public class GameController : MonoBehaviour {
 
 		while(!gameOver){
 			for (int i = 0; i<hazardCount; i++) {
+                GameObject hazard = hazards[Random.Range (0, hazards.Length)]; 
 				Vector3 spawnposition = new Vector3 (Random.Range (-spawnvalue.x, spawnvalue.x), spawnvalue.y, spawnvalue.z);
 				Quaternion spawnrotation = Quaternion.identity;
 				Instantiate (hazard, spawnposition, spawnrotation);

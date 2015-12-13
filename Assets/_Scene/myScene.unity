@@ -176,7 +176,9 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -224,7 +226,7 @@ Transform:
   m_PrefabInternal: {fileID: 1541479386}
   m_GameObject: {fileID: 305464186}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .00980000012, y: .879999995, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2121947191}
@@ -241,7 +243,7 @@ GUIText:
   m_Text: 'Bombe: 3'
   m_Anchor: 0
   m_Alignment: 0
-  m_PixelOffset: {x: 0, y: 0}
+  m_PixelOffset: {x: 10, y: -50}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 0}
@@ -334,7 +336,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fd5a200dd81a174e8fc47f5e558cf7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hazard: {fileID: 136306, guid: c270383e243e55d479d1c8da603d8948, type: 2}
+  hazards:
+  - {fileID: 186286, guid: c270383e243e55d479d1c8da603d8948, type: 2}
+  - {fileID: 183326, guid: 42253981e8fd8ab438d1629ec10ccab8, type: 2}
+  - {fileID: 102522, guid: efdf9312373c47848b05f6effe191d37, type: 2}
   spawnvalue: {x: 6, y: 0, z: 16}
   hazardCount: 5
   spawnwait: .5
@@ -885,7 +890,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 0}
   m_Material: {fileID: 0}
-  m_FontSize: 0
+  m_FontSize: 20
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -915,7 +920,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1200101893}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .00989999995, y: .930000007, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2121947191}
@@ -931,7 +936,7 @@ GUIText:
   m_Text: Presse ' B ' to Bombe
   m_Anchor: 0
   m_Alignment: 0
-  m_PixelOffset: {x: 0, y: 0}
+  m_PixelOffset: {x: 10, y: -30}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 0}
@@ -1043,11 +1048,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 439576, guid: aeb6db28cb35b4c97ac76f7990aea108, type: 2}
       propertyPath: m_LocalPosition.x
-      value: .00980000012
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 439576, guid: aeb6db28cb35b4c97ac76f7990aea108, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .879999995
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 439576, guid: aeb6db28cb35b4c97ac76f7990aea108, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1072,6 +1077,14 @@ Prefab:
     - target: {fileID: 439576, guid: aeb6db28cb35b4c97ac76f7990aea108, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 13236764, guid: aeb6db28cb35b4c97ac76f7990aea108, type: 2}
+      propertyPath: m_PixelOffset.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 13236764, guid: aeb6db28cb35b4c97ac76f7990aea108, type: 2}
+      propertyPath: m_PixelOffset.y
+      value: -50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aeb6db28cb35b4c97ac76f7990aea108, type: 2}
@@ -1156,7 +1169,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 0}
   m_Material: {fileID: 0}
-  m_FontSize: 20
+  m_FontSize: 25
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
