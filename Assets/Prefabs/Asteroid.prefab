@@ -13,7 +13,7 @@ GameObject:
   - 114: {fileID: 11406158}
   - 114: {fileID: 11408994}
   - 114: {fileID: 11400298}
-  - 114: {fileID: 11430804}
+  - 114: {fileID: 11472886}
   m_Layer: 0
   m_Name: Asteroid
   m_TagString: Asteroid
@@ -81,7 +81,9 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -146,9 +148,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
   playerExplosion: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
+  surpriseBox: {fileID: 156446, guid: 042131b57f31bed45a9dd1fa768598ef, type: 2}
   scoreValue: 10
   force: 0
---- !u!114 &11430804
+--- !u!114 &11472886
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

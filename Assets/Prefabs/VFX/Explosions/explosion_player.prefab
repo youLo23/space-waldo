@@ -80,6 +80,7 @@ GameObject:
   - 199: {fileID: 19900010}
   - 114: {fileID: 11425220}
   - 82: {fileID: 8298482}
+  - 114: {fileID: 11436746}
   m_Layer: 0
   m_Name: explosion_player
   m_TagString: Untagged
@@ -293,6 +294,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 1
+--- !u!114 &11436746
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a3574fda025ab4aab4185f203b06ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 3
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -7457,7 +7470,9 @@ ParticleSystemRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -7493,7 +7508,9 @@ ParticleSystemRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -7529,7 +7546,9 @@ ParticleSystemRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -7565,7 +7584,9 @@ ParticleSystemRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -7601,7 +7622,9 @@ ParticleSystemRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -7637,7 +7660,9 @@ ParticleSystemRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -7673,7 +7698,9 @@ ParticleSystemRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -7700,7 +7727,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: lifetime
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_audioClip
