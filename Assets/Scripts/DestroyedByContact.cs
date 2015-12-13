@@ -42,15 +42,20 @@ public class DestroyedByContact : MonoBehaviour {
 	void OnCollisionEnter(Collision other) {
 
 		Debug.Log (other.gameObject.tag);
-		if (other.gameObject.tag.Equals ("Asteroid"))
-			return;
-		Destroy(gameObject);
+        if (other.gameObject.tag.Equals("Asteroid")) {
+            return;
+        }
+        if (other.gameObject.tag == "Boundary") {
+            Debug.Log("Boundaaaaaary!");
+            return;
+        }
+        Destroy(gameObject);
 		Destroy (other.gameObject);
 		Instantiate (explosion, transform.position, transform.rotation);
 		if (other.gameObject.tag.Equals ("Player")) {
 			gameController.GameOver();
 			Instantiate (playerExplosion, other.transform.position, other.transform.rotation);
 		}
-		}
+	}
 
 }
