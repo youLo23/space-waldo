@@ -1,0 +1,56 @@
+Initialize engine version: 5.2.3f1 (f3d16a1fa2dd)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics (ID=0x152)
+    Vendor:   Intel
+    VRAM:     224 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\fred\Documents\UnityProjects\space-waldo\Builds\Native Standalone\Windows64\Space_Waldo_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\fred\Documents\UnityProjects\space-waldo\Builds\Native Standalone\Windows64\Space_Waldo_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\fred\Documents\UnityProjects\space-waldo\Builds\Native Standalone\Windows64\Space_Waldo_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\fred\Documents\UnityProjects\space-waldo\Builds\Native Standalone\Windows64\Space_Waldo_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\fred\Documents\UnityProjects\space-waldo\Builds\Native Standalone\Windows64\Space_Waldo_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\fred\Documents\UnityProjects\space-waldo\Builds\Native Standalone\Windows64\Space_Waldo_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\fred\Documents\UnityProjects\space-waldo\Builds\Native Standalone\Windows64\Space_Waldo_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\fred\Documents\UnityProjects\space-waldo\Builds\Native Standalone\Windows64\Space_Waldo_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\fred\Documents\UnityProjects\space-waldo\Builds\Native Standalone\Windows64\Space_Waldo_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.093 seconds
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+desktop: 1280x768 60Hz; virtual: 1280x768 at 0,0
+<RI> Initialized touch support.
+Platform assembly: C:\Users\fred\Documents\UnityProjects\space-waldo\Builds\Native Standalone\Windows64\Space_Waldo_Data\Managed\System.dll (this message is harmless)
+transform.lossyScale.z : 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+C:\Users\fred\Documents\UnityProjects\space-waldo\Builds\Native Standalone\Windows64
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 1928 -> priority: 1 
+Game Over!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.557636 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 471.
+Total: 0.226133 ms (FindLiveObjects: 0.034895 ms CreateObjectMapping: 0.017105 ms MarkObjects: 0.158738 ms  DeleteObjects: 0.004789 ms)
+
+transform.lossyScale.z : 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+C:\Users\fred\Documents\UnityProjects\space-waldo\Builds\Native Standalone\Windows64
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Game Over!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+

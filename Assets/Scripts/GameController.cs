@@ -29,19 +29,20 @@ public class GameController : MonoBehaviour {
 
 
 	void Start(){
-		HSText.text = "";
-		highScore = PlayerPrefs.GetInt (highScoreKey, 0);
-		Debug.Log (Directory.GetCurrentDirectory());
-		restart = false;
-		gameOver = false;
-		gameoverText.text = "";
-		restartText.text = "";
+        //Screen.SetResolution(600, 900, false);
+        restart = false;
+        gameOver = false;
+        HSText.text = "";
+        gameoverText.text = "";
+        restartText.text = "";
 		score = 0;
 		UpdateScore ();
 		StartCoroutine(SpawnWaves ());
 		//StartCoroutine (instBox ());
 		Bombepr();
-	}
+        highScore = PlayerPrefs.GetInt(highScoreKey, 0);
+        Debug.Log(Directory.GetCurrentDirectory());
+    }
 
 	void Update(){
 		if (restart) {
