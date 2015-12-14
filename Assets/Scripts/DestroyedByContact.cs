@@ -9,6 +9,7 @@ public class DestroyedByContact : MonoBehaviour {
     private GameController gameController;
     public int scoreValue;
     public float force;
+	public int probThreshold;
 
     void Start() {
         GameObject gameControllerObject = GameObject.FindGameObjectWithTag("GameController");
@@ -34,8 +35,7 @@ public class DestroyedByContact : MonoBehaviour {
         }
 
         //Instantiate (surpriseBox, transform.position, transform.rotation);
-        float prob = Random.Range(0, 100);
-        if (prob < 10) {
+		if (Random.Range(0, 100) < probThreshold) {
             //Debug.Log("Range = " + prob);
             gameController.instantiateBox(transform.position, transform.rotation);
         }

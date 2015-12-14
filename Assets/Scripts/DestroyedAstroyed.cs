@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class DestroyedAstroyed : MonoBehaviour {
-
+	/*
 	public GameObject explosion;
 	private int cptB;	
 	//private GController gameController;
@@ -26,8 +26,8 @@ public class DestroyedAstroyed : MonoBehaviour {
 				Destroy (gameObject);
 				Instantiate (explosion, transform.position, transform.rotation);
 				Debug.Log ("cptB: "+gameController.getCpt());
-
 			}
 		}
 	}
+	*/
 }	

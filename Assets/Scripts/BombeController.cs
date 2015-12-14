@@ -7,12 +7,18 @@ public class BombeController : MonoBehaviour {
 	public int cpt;		// Bombe reste
 	public GameObject explosion;
 	public GUIText Bomberest;
+	public GameObject astroExplosion;
 
 	
 	// Use this for initialization
 	void Start () {
-		cpt = 3;
 		bombe = true;
+		GameObject bombeControllerObject = GameObject.FindGameObjectWithTag ("GameController");
+		if (bombeControllerObject != null) {
+			bombeController = bombeControllerObject.GetComponent<BombeController> ();
+		} else {
+			Debug.Log("Composant GameController introuvable");
+		}
 	}
 	
 	// Update is called once per frame
@@ -25,6 +31,12 @@ public class BombeController : MonoBehaviour {
 				cpt--;
 				Debug.Log ("bombe affiche3");
 				UpdateBombe(cpt);
+
+				if (bombeController.getCpt() >= 0){
+					Destroy (gameObject);
+					Instantiate (explosion, transform.position, transform.rotation);
+					Debug.Log ("cptB: "+ bombeController.getCpt());
+				}
 			}
 		}
 
@@ -39,7 +51,7 @@ public class BombeController : MonoBehaviour {
 		Vector3 position_b;
 		Quaternion rotation_b;
 	
-		rotation_b=new Quaternion(0,0,0,0); 
+		rotation_b = new Quaternion(0,0,0,0); 
 		position_b = new Vector3(0,0,10f);
 
 		if (cpt == 0)
@@ -52,7 +64,7 @@ public class BombeController : MonoBehaviour {
 		}
 	}
 	void UpdateBombe(int cpt){
-		if(cpt>=0)
+		if(cpt >= 0)
 		Bomberest.text = "Bombe : " + cpt;
 	}
 
