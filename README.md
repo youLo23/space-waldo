@@ -54,7 +54,9 @@ Ce projet aura été très enrichissant pour nous car en plus de nous permett
 
 ### Références
 [1] Contributeur Wikipédia, « Moteur de jeu », Wikipédia. 28-août-2015.
+
 [2] « Git - À propos de la gestion de version ». [En ligne]. Disponible sur: https://git-
 scm.com/book/fr/v1/D%C3%A9marrage-rapide-%C3%80-propos-de-la-gestion-de-
 version. [Consulté le: 13-déc-2015].
+
 [3] Contributeur Wikipédia, « <span lang=“en”>GitHub</span> », Wikipédia. 30-oct-2015.
