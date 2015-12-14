@@ -51,13 +51,10 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-
-
-
 	IEnumerator SpawnWaves(){
 		yield return new WaitForSeconds (startwait);
 
-		while(!gameOver){
+		while(true){
 			for (int i = 0; i<hazardCount; i++) {
                 GameObject hazard = hazards[Random.Range (0, hazards.Length)]; 
 				Vector3 spawnposition = new Vector3 (Random.Range (-spawnvalue.x, spawnvalue.x), spawnvalue.y, spawnvalue.z);
@@ -67,12 +64,14 @@ public class GameController : MonoBehaviour {
 			}
 
 			yield return new WaitForSeconds(wavewait);
-		}
-		Debug.Log ("Game Over!");
-		restart = true;
-		restartText.text = "Press 'R' to restart";
 
-		
+            if (gameOver) {
+                restartText.text = "Press \"R\" for  Restart";
+                restart = true;
+                break;
+            }
+        }
+		Debug.Log ("Game Over!");
 	}
 
 	public void saveScore(){
@@ -144,7 +143,7 @@ public class GameController : MonoBehaviour {
 
 	public void GameOver(){
 		gameOver = true;
-		gameoverText.text = "Game Over.";
+		gameoverText.text = "GAME OVER !";
 		saveScore ();
 
 	}
