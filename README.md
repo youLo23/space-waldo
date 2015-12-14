@@ -3,7 +3,7 @@ worst space shooter ever
 
 
 ### Objectifs
-- Développer un Space Invaders avec l’aide du moteur 3D Unity.
+- Développer un Space Invaders avec l’aide du moteur 3D Unity.
 - Etre capable d’enregistrer les scores.
 - Ajouter des éléments de Gameplay originaux.
 
