@@ -3,19 +3,20 @@ using System.Collections;
 
 public class BombeController : MonoBehaviour {
 
-	private bool bombe;
 	public int cpt;		// Bombe reste
-	public GameObject explosion;
-	public GUIText Bomberest;
-	public GameObject astroExplosion;
+	public GameObject asteroid_explosion;
+    public GameObject enemy_explosion;
+    public GUIText Bomberest;
 
-	
-	// Use this for initialization
-	void Start () {
+    private BombeController bombeController;
+    private bool bombe;
+
+    // Use this for initialization
+    void Start () {
 		bombe = true;
-		GameObject bombeControllerObject = GameObject.FindGameObjectWithTag ("GameController");
-		if (bombeControllerObject != null) {
-			bombeController = bombeControllerObject.GetComponent<BombeController> ();
+		GameObject gameControllerObject = GameObject.FindGameObjectWithTag ("GameController");
+		if (gameControllerObject != null) {
+			bombeController = gameControllerObject.GetComponent<BombeController> ();
 		} else {
 			Debug.Log("Composant GameController introuvable");
 		}
@@ -32,9 +33,17 @@ public class BombeController : MonoBehaviour {
 				Debug.Log ("bombe affiche3");
 				UpdateBombe(cpt);
 
-				if (bombeController.getCpt() >= 0){
-					Destroy (gameObject);
-					Instantiate (explosion, transform.position, transform.rotation);
+				if (bombeController.getCpt() > 0){
+                    GameObject[] asteroids = GameObject.FindGameObjectsWithTag("Asteroid");
+                    foreach (GameObject asteroid in asteroids) {
+                        Instantiate(asteroid_explosion, asteroid.transform.position, asteroid.transform.rotation);
+                        Destroy(asteroid);
+                    }
+                    GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+                    foreach (GameObject enemy in enemies) {
+                        Instantiate(enemy_explosion, enemy.transform.position, enemy.transform.rotation);
+                        Destroy(enemy);
+                    }
 					Debug.Log ("cptB: "+ bombeController.getCpt());
 				}
 			}
@@ -57,10 +66,8 @@ public class BombeController : MonoBehaviour {
 		if (cpt == 0)
 			bombe = false;
 		else {
-
-			for(int j=0;j<5;j++)
-			Instantiate (explosion,position_b ,rotation_b);
-
+			for(int j = 0; j < 5; j++)
+			Instantiate (asteroid_explosion, position_b ,rotation_b);
 		}
 	}
 	void UpdateBombe(int cpt){

@@ -3,13 +3,13 @@ using System.Collections;
 
 public class LuckyContactDetector : MonoBehaviour {
 
-	private GameController gameController;
+	private BombeController bombController;
 
 	// Use this for initialization
 	void Start () {
 		GameObject gameControllerObject = GameObject.FindGameObjectWithTag("GameController");
 		if (gameControllerObject != null) {
-			gameController = gameControllerObject.GetComponent<GameController>();
+            bombController = gameControllerObject.GetComponent<BombeController>();
 		} else {
 			Debug.Log("Composant GameController introuvable");
 		}
@@ -23,7 +23,8 @@ public class LuckyContactDetector : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 
 		if (other.tag.Equals("Player")) {
-			Destroy(gameObject);
+            bombController.cpt++;
+            Destroy(gameObject);
 		}
 	}
 }

@@ -36,7 +36,7 @@ public class DestroyedByContact : MonoBehaviour {
 
         //Instantiate (surpriseBox, transform.position, transform.rotation);
 		if (Random.Range(0, 100) < probThreshold) {
-            //Debug.Log("Range = " + prob);
+            Debug.Log("Range = " + probThreshold);
             gameController.instantiateBox(transform.position, transform.rotation);
         }
 

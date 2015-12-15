@@ -162,7 +162,7 @@ public class GameController : MonoBehaviour {
 		scoreText.text = "Score : " + score;
 	}
 	void Bombepr(){
-		BombeText.text = "Presse B to Bombe";
+		BombeText.text = "Presse \"B\" to Bombe";
 	}
 
 
