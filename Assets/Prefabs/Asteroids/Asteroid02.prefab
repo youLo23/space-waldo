@@ -29,7 +29,6 @@ GameObject:
   - 136: {fileID: 13661752}
   - 114: {fileID: 11469732}
   - 114: {fileID: 11434292}
-  - 114: {fileID: 11425468}
   - 114: {fileID: 11476366}
   m_Layer: 0
   m_Name: Asteroid02
@@ -111,18 +110,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &11425468
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 135268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afba0cf9a3d3f4e4e9570aca15e6d8b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosion: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
 --- !u!114 &11434292
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -162,7 +149,7 @@ MonoBehaviour:
   playerExplosion: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
   scoreValue: 10
   force: 0
-  probThreshold: 10
+  probThreshold: 50
 --- !u!136 &13661752
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -189,7 +176,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: probThreshold
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

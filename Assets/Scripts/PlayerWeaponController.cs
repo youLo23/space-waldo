@@ -14,7 +14,7 @@ public class PlayerWeaponController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		audi = GetComponent<AudioSource >();
+		audi = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame

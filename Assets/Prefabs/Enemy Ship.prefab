@@ -256,6 +256,7 @@ MonoBehaviour:
   playerExplosion: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
   scoreValue: 20
   force: 0
+  probThreshold: 50
 --- !u!114 &11467706
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1412,6 +1413,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: tilt
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: probThreshold
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
