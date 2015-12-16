@@ -26,12 +26,8 @@ public class BombeController : MonoBehaviour {
 	void Update () {
 		if (bombe) {
 			if(Input.GetKeyDown(KeyCode.B)){
-				Debug.Log ("bombe affiche1");
 				explosion_bombe();
-				Debug.Log ("bombe affiche2");
-				cpt--;
-				Debug.Log ("bombe affiche3");
-				UpdateBombe(cpt);
+				cpt--;		
 
 				if (bombeController.getCpt() > 0){
                     GameObject[] asteroids = GameObject.FindGameObjectsWithTag("Asteroid");
@@ -46,8 +42,9 @@ public class BombeController : MonoBehaviour {
                     }
 					Debug.Log ("cptB: "+ bombeController.getCpt());
 				}
-			}
-		}
+            }
+            UpdateBombe(cpt);
+        }
 
 	}
 
@@ -71,7 +68,7 @@ public class BombeController : MonoBehaviour {
 		}
 	}
 	void UpdateBombe(int cpt){
-		if(cpt >= 0)
+		if(cpt > -1)
 		Bomberest.text = "Bombe : " + cpt;
 	}
 

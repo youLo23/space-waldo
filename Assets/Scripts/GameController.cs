@@ -18,11 +18,14 @@ public class GameController : MonoBehaviour {
 	public GUIText restartText;
 	public GUIText BombeText;
 	public GUIText HSText;
-	public GameObject surpriseBox;
+    public GUIText weaponText;
+    public GameObject surpriseBox;
+
 	private int score;
 	private bool readyToInstantiate;
 	private bool gameOver, restart;
 	private bool bombe;
+
 	public int highScore = 0;
 	string highScoreKey = "HighScore";
 
@@ -35,11 +38,12 @@ public class GameController : MonoBehaviour {
         HSText.text = "";
         gameoverText.text = "";
         restartText.text = "";
-		score = 0;
+        BombeText.text = "Press \"B\" to bomb";
+        weaponText.text = "Press \"W\" to switch weapon";
+        score = 0;
 		UpdateScore ();
 		StartCoroutine(SpawnWaves ());
 		//StartCoroutine (instBox ());
-		Bombepr();
         highScore = PlayerPrefs.GetInt(highScoreKey, 0);
         Debug.Log(Directory.GetCurrentDirectory());
     }
@@ -161,9 +165,5 @@ public class GameController : MonoBehaviour {
 	void UpdateScore(){
 		scoreText.text = "Score : " + score;
 	}
-	void Bombepr(){
-		BombeText.text = "Presse \"B\" to Bombe";
-	}
-
 
 }
